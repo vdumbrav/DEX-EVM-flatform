@@ -5,7 +5,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # Для зависимостей в package.json (npm или yarn)
+  - package-ecosystem: "npm" # Используйте "yarn" если вы используете yarn.lock вместо package-lock.json
+    directory: "/"           # Корень репозитория, где находится package.json
+    schedule:
+      interval: "weekly"     # Проверять обновления раз в неделю
+    open-pull-requests-limit: 5 # Максимум 5 открытых PR одновременно
+
+  # Для GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "weekly"
