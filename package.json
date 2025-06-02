@@ -113,7 +113,7 @@
   },
   "devDependencies": {
     "@lingui/cli": "4.11.1",
-    "@lingui/loader": "4.11.1",
+    "@lingui/loader": "5.3.2",
     "@lingui/macro": "4.11.1",
     "@vitejs/plugin-react": "^4.3.4",
     "buffer": "6.0.3",
